@@ -165,8 +165,9 @@ int main(){
     //linear search
     LinearSearch(ptr,element);
     //binary search
-    if (BinarySearch(ptr,element) != -1){
-        printf("The Element %d found at %d (BINARY SEARCH)",element,find);
+    int compare = BinarySearch(ptr,element);
+    if ( compare!= -1){
+        printf("The Element %d found at %d (BINARY SEARCH)",element,compare);
     }
     else{
         printf("The Element %d not present (BINARY SEARCH)",element);
