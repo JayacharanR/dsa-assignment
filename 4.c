@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-int peak=0,n=0,find;
+int peak=0,n=0;
 
 void print(int* ptr){
     printf("Array: ");
@@ -43,7 +43,7 @@ void LinearSearch(int* ptr,int element){
     int Dd=0;
     for(int i=0;i<peak;i++){
         if(ptr[i]==element){
-            printf("The Element %d found at %d (LINEAR SEARCH) \n",element,i);
+            printf("The Element %d found (LINEAR SEARCH) \n",element);
             Dd=1;
             break;
         }
@@ -78,7 +78,6 @@ int BinarySearch(int* ptr,int element){
         
         if (ptr[mid] == element) {
             return mid;
-            mid=find;
         }
 
         
@@ -167,7 +166,7 @@ int main(){
     //binary search
     int compare = BinarySearch(ptr,element);
     if ( compare!= -1){
-        printf("The Element %d found at %d (BINARY SEARCH)",element,compare);
+        printf("The Element %d found (BINARY SEARCH)",element);
     }
     else{
         printf("The Element %d not present (BINARY SEARCH)",element);
